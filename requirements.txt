@@ -1,2 +1,3 @@
 fastmcp
-pyodbc
+msal
+python-tds
