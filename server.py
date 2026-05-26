@@ -9,7 +9,7 @@ import sys, os, json, warnings, io, contextlib, logging
 warnings.filterwarnings("ignore")
 os.environ['PYTHONWARNINGS'] = 'ignore'
 
-from fastmcp import FastMCP
+from mcp.server.fastmcp import FastMCP
 import msal
 import pytds
 from datetime import datetime
