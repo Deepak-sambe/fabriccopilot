@@ -334,14 +334,6 @@ if __name__ == "__main__":
     log(f"Readonly: {READONLY}")
     port = int(os.environ.get("DATABRICKS_APP_PORT", 3000))
 
-    if __name__ == "__main__":
-    log("SQL Fabric MCP Server starting...")
-    log(f"Server  : {SERVER}")
-    log(f"Database: {DATABASE}")
-    log(f"Readonly: {READONLY}")
-
-    port = int(os.environ.get("DATABRICKS_APP_PORT", 3000))
-
     mcp.run(
         transport="sse",
         host="0.0.0.0",
