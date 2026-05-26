@@ -334,8 +334,4 @@ if __name__ == "__main__":
     log(f"Readonly: {READONLY}")
     port = int(os.environ.get("DATABRICKS_APP_PORT", 3000))
 
-    mcp.run(
-        transport="sse",
-        host="0.0.0.0",
-        port=port
-    )
+    mcp.run(transport="sse")
