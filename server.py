@@ -333,4 +333,6 @@ if __name__ == "__main__":
     log(f"Database: {DATABASE}")
     log(f"Readonly: {READONLY}")
     port = int(os.environ.get("DATABRICKS_APP_PORT", 3000))
-    mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
+
+    import uvicorn
+    uvicorn.run(mcp.get_asgi_app(), host="0.0.0.0", port=port)
