@@ -334,5 +334,4 @@ if __name__ == "__main__":
     log(f"Readonly: {READONLY}")
     port = int(os.environ.get("DATABRICKS_APP_PORT", 3000))
 
-    import uvicorn
-    uvicorn.run(mcp.get_asgi_app(), host="0.0.0.0", port=port)
+    mcp.run()
